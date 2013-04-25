@@ -18,21 +18,21 @@ public class Client implements OnTextMessage {
 	 * 切断時イベント
 	 */
 	public void onClose(int status, String protocol) {
-		app.removeClient(this);
+		this.app.removeClient(this);
 	}
 	/**
 	 * 接続時イベント
 	 */
 	public void onOpen(Connection conn) {
 		this.conn = conn;
-		app.addClient(this);
+		this.app.addClient(this);
 	}
 	/**
 	 * メッセージ受信イベント
 	 */
 	public void onMessage(String message) {
 		// メッセージを他のユーザーに飛ばす。
-		for(Client client : app.getClientSet()) {
+		for(Client client : this.app.getClientSet()) {
 			try {
 				client.sendMessage(message);
 			}

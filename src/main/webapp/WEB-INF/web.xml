@@ -6,6 +6,10 @@
   <servlet>
   	<servlet-name>MyWebSocket</servlet-name>
   	<servlet-class>com.ttProject.websocket.MyWebSocket</servlet-class>
+  	<init-param>
+  	  <param-name>minVersion</param-name>
+  	  <param-value>-1</param-value>
+  	</init-param>
   </servlet>
   <servlet-mapping>
   	<servlet-name>MyWebSocket</servlet-name>
