@@ -35,4 +35,9 @@
     	</plugin>
     </plugins>
   </build>
+  <parent>
+    <groupId>com.ttProject</groupId>
+    <artifactId>myLib.m2eHelper</artifactId>
+    <version>0.0.1</version>
+  </parent>
 </project>
